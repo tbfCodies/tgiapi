@@ -9,10 +9,7 @@ const checkuser = require('./routes/discord/checkuser');
 const tokenHandler = require('./routes/global/tokenHandler');
 require("dotenv").config();
 app.use(bodyParser.json());
-const PORT = process.env.PORT || 3000;
-
-const { connectDB } = require('./utils/database/databaseHandler');
-connectDB();
+const PORT = process.env.PORT || 7778;
 
 app.use('/api/v3', status);
 app.use('/api/v3', tokenHandler);
